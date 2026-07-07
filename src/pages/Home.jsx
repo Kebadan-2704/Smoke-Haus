@@ -19,25 +19,10 @@ const PIT_ITEMS = [
 ];
 
 export default function Home() {
-  const sweepRef = useRef(null);
   const storyRevealRef = useGsapReveal();
   const storyImgRef = useGsapReveal();
   const storyWipeRef = useWipeReveal();
   const prefersReduced = useReducedMotion();
-
-  // Gold sweep animation
-  useLayoutEffect(() => {
-    if (prefersReduced || !sweepRef.current) return;
-    const ctx = gsap.context(() => {
-      gsap.to(sweepRef.current, {
-        backgroundPosition: '0% 0',
-        duration: 1.8,
-        delay: 0.4,
-        ease: 'power2.out',
-      });
-    }, sweepRef);
-    return () => ctx.revert();
-  }, [prefersReduced]);
 
   // Band reveal
   const col1Ref = useGsapReveal({ delay: 0 });
@@ -73,7 +58,7 @@ export default function Home() {
             </span>
             <h1 className={styles.h1}>
               Slow Smoke.<br />
-              <span className={styles.sweep} ref={sweepRef}>Big Flavor.</span>
+              Big Flavor.
             </h1>
             <p className={styles.heroSub}>
               Brisket, ribs and pulled pork, smoked low and slow over real wood — right here in Kollam.
