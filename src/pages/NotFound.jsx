@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import styles from './NotFound.module.css';
 
@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>Page Not Found � Smoke Haus Kollam</title>
+        <title>Page Not Found — Smoke Haus Kollam</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       
