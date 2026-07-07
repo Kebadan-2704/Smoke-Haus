@@ -62,7 +62,7 @@ export default function Home() {
           playsInline
           poster="/images/hero-brisket.png"
         >
-          <source src="/videos/1000220137.mp4" type="video/mp4" />
+          <source src="/intro video.mp4" type="video/mp4" />
         </video>
         <div className={styles.heroOverlay} />
         <SmokeCanvas />
