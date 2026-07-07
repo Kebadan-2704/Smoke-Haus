@@ -1,0 +1,206 @@
+/* ============================================================
+   SMOKE HAUS — Global Design Tokens & Base Styles
+   Palette sampled directly from the client's woodcut logo mark.
+   ============================================================ */
+
+:root {
+  --bark:        #581A0D;
+  --bark-deep:   #3D1108;
+  --ember:       #C1552B;
+  --ember-bright:#E06B36;
+  --cream:       #F4ECDC;
+  --cream-dim:   #E8DCC4;
+  --char:        #1C1613;
+  --char-soft:   #2A211C;
+  --gold:        #C99A3E;
+  --ash:         #786858;   /* Darkened for WCAG AA contrast on cream */
+  --ash-dark:    #5C4F42;   /* Darkened for WCAG AA contrast on cream */
+
+  --font-display: 'Oswald', system-ui, sans-serif;
+  --font-label:   'Oswald', system-ui, sans-serif;
+  --font-body:    'Zilla Slab', Georgia, serif;
+  --font-mono:    'Space Mono', monospace;
+
+  --container: 1180px;
+  --radius: 6px;
+  --ease-smoke: cubic-bezier(.22,.9,.28,1);
+}
+
+/* ---- Skip Nav ---- */
+.skip-nav {
+  position: fixed;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  background: var(--ember);
+  color: var(--cream);
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-family: var(--font-label);
+  font-size: 14px;
+  text-decoration: none;
+  transition: top .2s;
+}
+.skip-nav:focus {
+  top: 16px;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body {
+  margin: 0;
+  background: #FDFBF7; /* Pearl White */
+  color: var(--bark-deep);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+body.menu-open { overflow: hidden; }
+img { max-width: 100%; display: block; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4 { 
+  margin: 0; 
+  font-family: var(--font-display); 
+  font-weight: 600; 
+  line-height: 1.08; 
+  letter-spacing: .01em; 
+  text-transform: uppercase;
+  color: var(--bark);
+}
+p { margin: 0 0 1em; color: var(--ash-dark); }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: var(--ember); color: var(--cream); }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Layout ---- */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.section-pad { padding: 110px 0; }
+
+/* ---- Eyebrow ---- */
+.eyebrow {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ember);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: '';
+  width: 26px; height: 2px;
+  background: var(--ember);
+  display: inline-block;
+}
+.eyebrow--gold { color: var(--gold); }
+.eyebrow--gold::before { background: var(--gold); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .25s var(--ease-smoke);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--bark);
+  outline-offset: 4px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary Bark (Brown) */
+.btn-ember { 
+  background: var(--bark);
+  color: #FDFBF7; 
+}
+.btn-ember:hover { 
+  background: var(--bark-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(88, 26, 13, 0.2);
+}
+
+/* Line Button */
+.btn-line { 
+  background: transparent;
+  border: 1px solid var(--bark);
+  color: var(--bark); 
+}
+.btn-line:hover { 
+  background: var(--bark);
+  color: #FDFBF7;
+  transform: translateY(-2px);
+}
+
+/* Dark Button (Alternative) */
+.btn-dark { 
+  background: var(--char-soft);
+  color: #FDFBF7; 
+}
+.btn-dark:hover { 
+  background: var(--char);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* ---- Section head ---- */
+.section-head { max-width: 640px; margin-bottom: 56px; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-head h2 { font-size: clamp(32px, 4.4vw, 56px); color: var(--bark); }
+.section-head p { color: var(--ash-dark); font-size: 18px; margin-top: 14px; }
+
+/* ---- Keyframes ---- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes scrollpulse {
+  0%, 100% { opacity: .3; }
+  50% { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .section-pad { padding: 70px 0; }
+}
+@media (max-width: 720px) {
+  .section-pad { padding: 50px 0; }
+  .wrap { padding: 0 18px; }
+}

@@ -1,0 +1,94 @@
+/* Sticky Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 72px;
+  z-index: 50;
+  background: rgba(253, 251, 247, 0.95); /* Pearl White */
+  backdrop-filter: blur(10px);
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.tab {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 13px;
+  background: transparent;
+  border: 1px solid var(--bark);
+  color: var(--bark);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all .25s var(--ease-smoke);
+}
+.tab:hover {
+  background: var(--bark);
+  color: #FDFBF7;
+}
+.tab:active {
+  transform: scale(0.96);
+}
+.tab:focus-visible {
+  outline: 2px solid var(--bark-deep);
+  outline-offset: 4px;
+}
+
+/* Category Blocks */
+.category {
+  margin-bottom: 90px;
+}
+.catImageWrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.catImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-smoke);
+}
+.catImage:hover {
+  transform: scale(1.03);
+}
+.catHead {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 34px;
+}
+.catHead h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  color: var(--bark);
+}
+.rule {
+  flex: 1;
+  height: 1px;
+  background: repeating-linear-gradient(to right, var(--ash) 0 6px, transparent 6px 12px);
+}
+.catNote {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ember);
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .tabs {
+    padding: 12px 18px;
+    gap: 8px;
+    top: 60px;
+  }
+  .tab {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .category {
+    margin-bottom: 60px;
+  }
+}

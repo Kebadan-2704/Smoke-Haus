@@ -1,0 +1,35 @@
+.orderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.catering {
+  background: linear-gradient(120deg, var(--bark) 0%, var(--bark-deep) 100%);
+  color: var(--cream);
+  padding: 70px 50px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.cateringH2 {
+  font-size: clamp(28px, 3.4vw, 42px);
+  margin-bottom: 14px;
+}
+.cateringDesc {
+  color: var(--cream-dim);
+  margin-bottom: 24px;
+}
+.specs {
+  font-family: var(--font-mono);
+  color: var(--cream-dim);
+  font-size: 14px;
+  line-height: 2;
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+}
+
+@media (max-width: 980px) {
+  .orderGrid, .catering { grid-template-columns: 1fr; }
+  .catering { padding: 40px 30px; }
+}

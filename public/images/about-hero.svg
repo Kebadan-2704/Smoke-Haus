@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <pattern id="diag" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#2A211C"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#3a2e26" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#diag)"/>
+  <rect width="800" height="1000" fill="#2A211C" opacity="0.35"/>
+  <g fill="none" stroke="#C1552B" stroke-width="3" opacity="0.9">
+    <circle cx="400" cy="460" r="46"/>
+    <path d="M 385 445 L 385 475 L 415 460 Z" />
+  </g>
+  <text x="50%" y="550" text-anchor="middle" font-family="Oswald, sans-serif" font-size="22" letter-spacing="3" fill="#F4ECDC">PHOTO PLACEHOLDER</text>
+  <text x="50%" y="582" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#9C8D7C">Smoke Haus dining room</text>
+</svg>

@@ -1,0 +1,55 @@
+.process {
+  background: transparent;
+  padding: 0 !important; /* Managed by JS pin or section-pad */
+}
+.pin {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 110px 0;
+}
+.head {
+  margin-bottom: 60px;
+}
+.title {
+  color: var(--bark-deep);
+  font-size: clamp(30px, 3.8vw, 48px);
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 600px;
+}
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 30px;
+  row-gap: 8px;
+}
+.num {
+  grid-row: 1 / span 2;
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: rgba(61, 17, 8, 0.08); /* Faded bark color for background numbers */
+  line-height: 1;
+}
+.stepTitle {
+  font-size: 24px;
+  color: var(--bark);
+  align-self: end;
+}
+.stepDesc {
+  color: var(--ash-dark);
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .pin { min-height: auto; padding: 70px 0; }
+  .process { padding: 0 !important; }
+  .head { margin-bottom: 40px; }
+  .num { font-size: 48px; }
+  .stepTitle { font-size: 22px; }
+  .stepDesc { font-size: 16px; }
+}

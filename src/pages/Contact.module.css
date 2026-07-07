@@ -1,0 +1,78 @@
+.exteriorImgWrap {
+  width: 100%;
+  height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+.exteriorImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--ember);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.label {
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: .12em;
+  color: var(--ash-dark);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.text {
+  font-size: 18px;
+  color: var(--char-soft);
+}
+.textLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s;
+}
+.textLink:hover {
+  color: var(--ember);
+}
+
+.mapWrap {
+  margin-top: 110px;
+  width: 100%;
+  height: 440px; /* Explicit height so iframe height: 100% works */
+  background: var(--char);
+  border-top: 1px solid rgba(0,0,0,.05);
+}
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .grid { grid-template-columns: 1fr; gap: 60px; }
+  .mapWrap { min-height: 340px; margin-top: 70px; }
+}
+@media (max-width: 720px) {
+  .text { font-size: 17px; }
+  .mapWrap { min-height: 280px; max-height: 320px; margin-top: 50px; }
+}

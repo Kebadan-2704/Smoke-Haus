@@ -1,0 +1,31 @@
+.strip {
+  background: var(--bark);
+  color: var(--cream);
+  overflow: hidden;
+  padding: 16px 0;
+  border-top: 1px solid var(--bark-deep);
+  border-bottom: 1px solid var(--bark-deep);
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.inner {
+  display: flex;
+  white-space: nowrap;
+}
+.inner span {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 14px;
+  padding: 0 26px;
+  white-space: nowrap;
+  color: var(--cream-dim);
+}
+.inner em {
+  color: var(--ember-bright);
+  font-style: normal;
+  padding: 0 10px;
+}

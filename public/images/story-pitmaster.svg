@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 840">
+  <defs>
+    <pattern id="diag" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#2A211C"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#3a2e26" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="840" fill="url(#diag)"/>
+  <rect width="800" height="840" fill="#2A211C" opacity="0.35"/>
+  <g fill="none" stroke="#C1552B" stroke-width="3" opacity="0.9">
+    <circle cx="400" cy="380" r="46"/>
+    <path d="M 385 365 L 385 395 L 415 380 Z" />
+  </g>
+  <text x="50%" y="470" text-anchor="middle" font-family="Oswald, sans-serif" font-size="22" letter-spacing="3" fill="#F4ECDC">PHOTO PLACEHOLDER</text>
+  <text x="50%" y="502" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#9C8D7C">Pitmaster tending the smoker</text>
+</svg>

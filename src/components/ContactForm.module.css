@@ -1,0 +1,105 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.group label {
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: .12em;
+  color: var(--ash-dark);
+  text-transform: uppercase;
+}
+.group input,
+.group textarea {
+  background: transparent;
+  border: 1px solid var(--char-soft);
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--bark-deep);
+  outline: none;
+  transition: all .3s;
+  border-radius: var(--radius);
+}
+.group input::placeholder,
+.group textarea::placeholder {
+  color: var(--ash);
+}
+.group input:focus,
+.group textarea:focus {
+  background: #fff;
+  border-color: var(--bark);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.submitBtn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Success Message */
+.successMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0,0,0,.03);
+  border-radius: var(--radius);
+  animation: fadeIn 0.4s ease-out;
+}
+.successMsg svg {
+  width: 48px;
+  height: 48px;
+  color: var(--ember);
+  margin-bottom: 20px;
+}
+.successMsg h3 {
+  font-size: 24px;
+  color: var(--bark);
+  margin-bottom: 12px;
+}
+.successMsg p {
+  color: var(--ash-dark);
+  font-size: 16px;
+  max-width: 300px;
+  margin: 0;
+}
+
+.sendAnotherBtn {
+  margin-top: 20px;
+  border-color: var(--bark);
+  color: var(--bark);
+}
+.sendAnotherBtn:hover {
+  background: var(--bark);
+  color: var(--cream);
+}
+
+.errorBanner {
+  background: rgba(193,85,43,.1);
+  color: var(--ember);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  border-left: 4px solid var(--ember);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

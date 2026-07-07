@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <pattern id="diag" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="28" height="28" fill="#2A211C"/>
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#3a2e26" stroke-width="14"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="800" fill="url(#diag)"/>
+  <rect width="600" height="800" fill="#2A211C" opacity="0.35"/>
+  <g fill="none" stroke="#C1552B" stroke-width="3" opacity="0.9">
+    <circle cx="300" cy="360" r="40"/>
+    <circle cx="300" cy="340" r="8" fill="#C1552B"/>
+  </g>
+  <text x="50%" y="440" text-anchor="middle" font-family="Oswald, sans-serif" font-size="20" letter-spacing="3" fill="#F4ECDC">PHOTO PLACEHOLDER</text>
+  <text x="50%" y="468" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#9C8D7C">Front of house portrait</text>
+</svg>

@@ -1,0 +1,16 @@
+.divider {
+  display: flex;
+  justify-content: center;
+  padding: 64px 0 24px;
+}
+.svg {
+  width: 160px;
+  height: 80px;
+  overflow: visible;
+}
+.svg path {
+  fill: none;
+  stroke: var(--ember);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
